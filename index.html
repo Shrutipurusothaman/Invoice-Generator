@@ -1,26 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link href="output.css" rel="stylesheet">
-    <title>Invoice Generator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link href="output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Invoice Generator</title>
 </head>
+
 <body>
   <header class="invoice-generator-title">
     <div class="flex m-4 justify-between">
-       <h1 class="text-2xl">GST INVOICE GENERATOR</h1>
-       <p class="font-bold border-2 border-black hover:bg-black hover:text-white hover:cursor-pointer rounded-sm p-2 " id="Signup-Button">Sign up It's Free</p>
+      <h1 class="text-2xl">GST INVOICE GENERATOR</h1>
+      <p class="font-bold border-2 border-black hover:bg-black hover:text-white hover:cursor-pointer rounded-sm p-2 "
+        id="Signup-Button">Sign up It's Free</p>
     </div>
-      <div class="border-b border-black-800 w-full"></div>
+    <div class="border-b border-black-800 w-full"></div>
   </header>
   <nav class="flex flex-col gap-5 justify-center items-center mt-6">
-      <h1 class="text-5xl font-light">
-        <span class="text-blue-600 ">Create invoices</span><br> that make you look good...
+    <h1 class="text-5xl font-light">
+      <span class="text-blue-600 ">Create invoices</span><br> that make you look good...
     </h1>
-    <p class="text-xl font-light w-full sm:max-w-md md:max-w-2xl mx-auto text-center">Create professional yet personalized invoices online using invoice generator tool. Just add all the information to the invoice and download or print it to send it to your customers.</p>
+    <p class="text-xl font-light w-full sm:max-w-md md:max-w-2xl mx-auto text-center">Create professional yet
+      personalized invoices online using invoice generator tool. Just add all the information to the invoice and
+      download or print it to send it to your customers.</p>
   </nav>
-   
-    <script src="./assests/script.js"></script>
+  <main>
+    <div class="border-1 border-gray-500 max-w-4xl m-auto rounded-2xl shadow-sm p-10 mt-10 font-sans">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center gap-6">
+          <div class="px-10 py-8 border-2 border-gray-200 rounded-2xl text-center">
+            <div id="File-Upload-icon"><i class="fa-solid fa-upload cursor-pointer" style="color: #65ace2;"></i></div>
+            <div class="font-bold text-blue-500">UPLOAD</div>
+          </div>
+          <!--Upload text-->
+          <span class="font-normal text-gray-600">
+            <p class="m-0">Upload logo</p>
+            <p class="text-gray-400 m-0 text-sm">Max size 1MB</p>
+          </span>
+        </div>
+        <!--Invoice heading-->
+        <div class="ml-auto">
+          <input id="invoice-Heading" type="text" placeholder="Enter your Invoice Title"
+            class="border-2 border-gray-300 px-6 py-6 text-3xl text-center font-bold rounded-lg cursor-pointer" size="14">
+        </div>
+      </div>
+    </div>
+    <!--Owner Invoice details-->
+    <div>
+
+    </div>
+  </main>
+  <script src="./assests/script.js"></script>
 </body>
+
 </html>
