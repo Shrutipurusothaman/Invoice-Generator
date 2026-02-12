@@ -16,7 +16,7 @@
     <div class="flex m-4 justify-between">
       <h1 class="text-2xl">GST INVOICE GENERATOR</h1>
       <p class="font-bold border-2 border-black hover:bg-black hover:text-white hover:cursor-pointer rounded-sm p-2 "
-        id="Signup-Button">Sign up It's Free</p>
+        id="Signup-Button">Sign up</p>
     </div>
     <div class="border-b border-black-800 w-full"></div>
   </header>
@@ -29,28 +29,30 @@
       download or print it to send it to your customers.</p>
   </nav>
   <main>
-    <div class="border-1 border-gray-500 max-w-4xl m-auto rounded-2xl shadow-sm p-10 mt-10 font-sans">
-      <div class="flex justify-between items-center">
-        <div class="flex items-center gap-6">
-          <div class="px-10 py-8 border-2 border-gray-200 rounded-2xl text-center">
-            <div id="File-Upload-icon"><i class="fa-solid fa-upload cursor-pointer" style="color: #65ace2;"></i></div>
-            <div class="font-bold text-blue-500">UPLOAD</div>
+    <div class="border-1 border-gray-500 max-w-4xl mx-auto rounded-2xl shadow-sm p-6 md:p-10 mt-10 font-sans mx-4">
+
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+
+        <div class="flex items-center gap-6 w-full md:w-auto">
+          <div class="px-6 py-4 md:px-10 md:py-8 border-2 border-gray-200 rounded-2xl text-center">
+            <i class="fa-solid fa-upload cursor-pointer" style="color: #65ace2;"></i>
+            <div class="font-bold text-blue-500 text-sm md:text-base">UPLOAD</div>
           </div>
-          <!--Upload text-->
-          <span class="font-normal text-gray-600">
-            <p class="m-0">Upload logo</p>
-            <p class="text-gray-400 m-0 text-sm">Max size 1MB</p>
+
+          <span>
+            <p class="m-0 font-semibold">Upload logo</p>
+            <p class="text-gray-400 m-0 text-xs md:text-sm">Max size 1MB</p>
           </span>
         </div>
-        <!--Invoice heading-->
-        <div class="ml-auto">
-          <input id="invoice-Heading" type="text" placeholder="Enter your Invoice Title"
-            class="border-2 border-gray-300 px-6 py-6 text-3xl text-center font-bold rounded-lg cursor-pointer" size="14">
+
+        <div class="w-full md:w-auto">
+          <input id="invoice-Heading" type="text" placeholder="INVOICE"
+            class="w-full border-2 border-gray-300 px-4 py-4 text-xl md:text-3xl text-center font-bold rounded-lg">
         </div>
+
       </div>
     </div>
     <!--Owner Invoice details-->
-    <div>
 
     </div>
   </main>
