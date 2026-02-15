@@ -25,7 +25,8 @@
     <h1 class="text-3xl font-light m-auto sm:text-5xl mx-auto my-auto">
       <span class="text-blue-600">Create invoices</span><br> that make you look good...
     </h1>
-    <p class="text-50 sm:text-xl md:text-2xl font-light sm:max-w-md md:max-w-2xl mx-auto text-center ">Create professional yet
+    <p class="text-50 sm:text-xl md:text-2xl font-light sm:max-w-md md:max-w-2xl mx-auto text-center ">Create
+      professional yet
       personalized invoices online using invoice generator tool. Just add all the information to the invoice and
       download or print it to send it to your customers.</p>
   </nav>
@@ -104,34 +105,55 @@
                 class="w-1/2 border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded p-1 sm:w-full">
             </div>
           </div>
-            <div class="flex flex-col gap-3">
-              <div class="grid grid-cols-2 gap-x-2 gap-y-3">
-                <p class="self-center text-sm font-semibold text-gray-600">Invoice #</p>
-                <input type="text" placeholder="INV-12"
-                  class="border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded p-1">
+          <div class="flex flex-col gap-3">
+            <div class="grid grid-cols-2 gap-x-2 gap-y-3">
+              <p class="self-center text-sm font-semibold text-gray-600">Invoice #</p>
+              <input type="text" placeholder="INV-12"
+                class="border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded p-1">
 
-                <p class="self-center text-sm font-semibold text-gray-600">Date</p>
-                <input type="date"
-                  class="text-gray-600 border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 rounded p-1 w-full">
+              <p class="self-center text-sm font-semibold text-gray-600">Date</p>
+              <input type="date"
+                class="text-gray-600 border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 rounded p-1 w-full">
 
-                <p class="self-center text-sm font-semibold text-gray-600">Due Date</p>
-                <input type="date"
-                  class="text-gray-600 border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 rounded p-1 w-full">
-              </div>
+              <p class="self-center text-sm font-semibold text-gray-600">Due Date</p>
+              <input type="date"
+                class="text-gray-600 border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 rounded p-1 w-full">
             </div>
+          </div>
         </div>
         <div class="flex flex-row gap-3 mt-10">
           <p>Place Of Supply :</p>
           <input type="text" placeholder="State"
-            class="w-1/2 border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded sm:w-full">
+            class="w-1/2 border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded">
         </div>
       </form>
+      <div class="bg-gray-900 mt-10 w-full">
+        <div class="grid grid-cols-[3fr_1fr_1fr_1fr_1fr_1fr_1fr] p-2 gap-2">
+          <div class="text-white text-center text-sm font-semibold">Item details</div>
+          <div class="text-white text-center text-sm font-semibold">Qty</div>
+          <div class="text-white text-center text-sm font-semibold">Rate</div>
+          <div class="text-white text-center text-sm font-semibold">SGST</div>
+          <div class="text-white text-center text-sm font-semibold">CGST</div>
+          <div class="text-white text-center text-sm font-semibold">Cess</div>
+          <div class="text-white text-center text-sm font-semibold">Amount</div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-[3fr_1fr_1fr_1fr_1fr_1fr_1fr] gap-2 mt-2">
+        <div class="flex flex-col gap-3">
+          <textarea class="border border-gray-400 w-full p-2 text-sm h-10" placeholder="Product Details"></textarea>
+          <input type="text" placeholder="HSN/SAC">
+        </div>
+
+
+        <input type="number" class="border border-gray-300 w-full text-center h-10" placeholder="0.00" />
+        <input type="number" class="border border-gray-300 w-full text-center h-10" placeholder="0" />
+        <input type="number" class="border border-gray-300 w-full text-center h-10" placeholder="0" />
+        <input type="number" class="border border-gray-300 w-full text-center h-10" placeholder="0" />
+        <input type="number" class="border border-gray-300 w-full text-center h-10" placeholder="0" />
+        <input readonly class="border border-gray-300 w-full text-center h-10" placeholder="0" />
+      </div>
     </div>
-
-
-
-
-
   </main>
   <script src="./assests/script.js"></script>
 </body>
