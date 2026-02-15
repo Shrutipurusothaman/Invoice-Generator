@@ -14,15 +14,15 @@
 
 <body>
   <header class="invoice-generator-title">
-    <div class="flex m-4 justify-between">
-      <h1 class="text-2xl">GST INVOICE GENERATOR</h1>
+    <div class="flex m-4 justify-between items-center gap-2">
+      <h1 class="text-xl md:text-2xl">GST INVOICE GENERATOR</h1>
       <p class="font-bold border-2 border-black hover:bg-black hover:text-white hover:cursor-pointer rounded-sm p-2 "
         id="Signup-Button">Sign up</p>
     </div>
     <div class="border-b border-black-800 w-full"></div>
   </header>
   <nav class="flex flex-col gap-5 justify-center items-center mt-6">
-    <h1 class="text-5xl font-light m-auto sm:mx-auto my-auto">
+    <h1 class="text-3xl font-light m-auto sm:text-5xl mx-auto my-auto">
       <span class="text-blue-600">Create invoices</span><br> that make you look good...
     </h1>
     <p class="text-xl font-light w-full sm:max-w-md md:max-w-2xl mx-auto text-center">Create professional yet
@@ -31,7 +31,7 @@
   </nav>
   <main>
     <div
-      class="border-1 border-gray-500 mx-auto my-auto rounded-2xl shadow-sm p-6 md:p-10 mt-10 font-sans mx-4  max-w-md sm:max-w-md md:max-w-2xl lg:max-w-4xl">
+      class="border border-gray-500 mx-4 md:mx-auto my-10 rounded-2xl shadow-sm p-4 md:p-10 max-w-md sm:max-w-md md:max-w-2xl lg:max-w-4xl">
 
       <div class="flex flex-col md:flex-row justify-between items-center gap-6">
         <!--file upload-->
@@ -86,36 +86,44 @@
       </form>
 
       <!--Client Details-->
-      <form>
-        <div class="grid grid-cols-2 mt-20 gap-3 sm:grid-cols-2 mt-20 gap-3">
-          <div class="flex flex-col gap-2">
+      <form class="mt-16 md:mt-20">
+        <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 gap-8 md:gap-12">
+          <div class="flex flex-col gap-3">
             <input type="text" placeholder="Bill To:"
-              class="text-black-400 border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded hover:cursor-pointer">
+              class="w-full border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded p-1">
             <input type="text" placeholder="Client's Company"
-              class="text-black-400 border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded hover:cursor-pointer">
+              class="w-full border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded p-1">
             <input type="text" placeholder="Client's GSTIN"
-              class="text-black-400 border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded hover:cursor-pointer">
+              class="w-full border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded p-1">
             <input type="text" placeholder="Client's Address"
-              class="text-black-400 border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded hover:cursor-pointer">
-            <input type="text" placeholder="City"
-              class="text-black-400 border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded hover:cursor-pointer">
-            <input type="text" placeholder="State"
-              class="text-black-400 border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded hover:cursor-pointer">
-          </div>
-          <div class="flex flex-col gap-2">
-            <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 gap-2">
-              <input type="text" placeholder="Invoice" class="text-black-400 border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded hover:cursor-pointer" >
-              <input type="text" placeholder="INV-12" class="text-black-400 border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded hover:cursor-pointer">
-              <input type="text" placeholder="Invoice Date" class="text-black-400 border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded hover:cursor-pointer">
-              <input type="datetime-local" class="text-gray-600 cursor-pointer">
-              <input type="text" placeholder="Due Date" class="text-black-400 border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded hover:cursor-pointer">
-              <input type="datetime-local" class="text-gray-600 cursor-pointer">
+              class="w-full border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded p-1">
+            <div class="flex flex-row gap-2 sm:flex-col ">
+              <input type="text" placeholder="City"
+                class="w-1/2 border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded p-1 sm:w-full">
+              <input type="text" placeholder="State"
+                class="w-1/2 border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded p-1 sm:w-full">
             </div>
           </div>
+            <div class="flex flex-col gap-3">
+              <div class="grid grid-cols-2 gap-x-2 gap-y-3">
+                <p class="self-center text-sm font-semibold text-gray-600">Invoice #</p>
+                <input type="text" placeholder="INV-12"
+                  class="border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded p-1">
+
+                <p class="self-center text-sm font-semibold text-gray-600">Date</p>
+                <input type="date"
+                  class="text-gray-600 border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 rounded p-1 w-full">
+
+                <p class="self-center text-sm font-semibold text-gray-600">Due Date</p>
+                <input type="date"
+                  class="text-gray-600 border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 rounded p-1 w-full">
+              </div>
+            </div>
         </div>
         <div class="flex flex-row gap-3 mt-10">
           <p>Place Of Supply :</p>
-          <input type="text" placeholder="State" class="text-black-400 border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded hover:cursor-pointer">
+          <input type="text" placeholder="State"
+            class="text-black-400 border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded hover:cursor-pointer">
         </div>
       </form>
     </div>
