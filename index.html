@@ -127,8 +127,9 @@
             class="w-1/2 border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded">
         </div>
       </form>
-      <div class="bg-gray-900 mt-10 w-full">
-        <div class="grid grid-cols-[3fr_1fr_1fr_1fr_1fr_1fr_1fr] p-2 gap-2">
+      <div class="bg-gray-900 mt-10 sm:w-full">
+        <div
+          class="grid grid-cols-[1fr_1fr_1fr_1fr_1fr_1fr_1fr_0.5fr] p-2 gap-2 sm:grid-cols-[3fr_1fr_1fr_1fr_1fr_1fr_1fr_0.5fr]">
           <div class="text-white text-center text-sm font-semibold">Item details</div>
           <div class="text-white text-center text-sm font-semibold">Qty</div>
           <div class="text-white text-center text-sm font-semibold">Rate</div>
@@ -136,23 +137,28 @@
           <div class="text-white text-center text-sm font-semibold">CGST</div>
           <div class="text-white text-center text-sm font-semibold">Cess</div>
           <div class="text-white text-center text-sm font-semibold">Amount</div>
+          <div class="text-white text-center text-sm font-semibold"></div>
         </div>
       </div>
 
-      <div class="grid grid-cols-[3fr_1fr_1fr_1fr_1fr_1fr_1fr] gap-2 mt-2">
-        <div class="flex flex-col gap-3">
-          <textarea class="border border-gray-400 w-full p-2 text-sm h-10" placeholder="Product Details"></textarea>
-          <input type="text" placeholder="HSN/SAC">
+      <div id="product-list" class="flex flex-col">
+        <div
+          class="product-row grid grid-cols-[1fr_1fr_1fr_1fr_1fr_1fr_1fr_0.5fr] gap-2 mt-2 sm:grid-cols-[3fr_1fr_1fr_1fr_1fr_1fr_1fr_0.5fr] items-center">
+          <div class="flex flex-col gap-3">
+            <textarea class="border border-gray-400 w-full p-2 text-sm h-10" placeholder="Product Details"></textarea>
+            <input type="text" class="border border-gray-300 p-1" placeholder="HSN/SAC">
+          </div>
+          <input type="number" class="border border-gray-300 w-full text-center h-10" placeholder="0" />
+          <input type="number" class="border border-gray-300 w-full text-center h-10" placeholder="0.00" />
+          <input type="number" class="border border-gray-300 w-full text-center h-10" placeholder="0" />
+          <input type="number" class="border border-gray-300 w-full text-center h-10" placeholder="0" />
+          <input type="number" class="border border-gray-300 w-full text-center h-10" placeholder="0" />
+          <input readonly class="border border-gray-300 w-full text-center h-10 bg-gray-100" placeholder="0" />
+          <button type="button" class="remove-btn text-red-500 hover:text-red-700 font-bold text-xl">✕</button>
         </div>
-
-
-        <input type="number" class="border border-gray-300 w-full text-center h-10" placeholder="0.00" />
-        <input type="number" class="border border-gray-300 w-full text-center h-10" placeholder="0" />
-        <input type="number" class="border border-gray-300 w-full text-center h-10" placeholder="0" />
-        <input type="number" class="border border-gray-300 w-full text-center h-10" placeholder="0" />
-        <input type="number" class="border border-gray-300 w-full text-center h-10" placeholder="0" />
-        <input readonly class="border border-gray-300 w-full text-center h-10" placeholder="0" />
       </div>
+      <button id="add-row-btn" class="mt-4 text-blue-600 font-semibold hover:cursor-pointer">+ Add Line Item</button>
+
     </div>
   </main>
   <script src="./assests/script.js"></script>
