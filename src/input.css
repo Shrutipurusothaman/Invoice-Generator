@@ -1,1 +1,26 @@
 @import "tailwindcss";
+
+@theme {
+  --breakpoint-print: print;
+}
+
+@media print {
+  body {
+    background: white !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  #invoice-card {
+    width: 100% !important;
+    max-width: none !important;
+    shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+
+  .product-row {
+    page-break-inside: avoid;
+  }
+}

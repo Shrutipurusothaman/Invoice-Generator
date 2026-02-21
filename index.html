@@ -31,14 +31,15 @@
       download or print it to send it to your customers.</p>
   </nav>
   <main>
-    <div
+    <div id="invoice-card"
       class="border border-gray-500 m-auto md:mx-auto my-10 w-3/4 rounded-2xl shadow-sm p-4 sm:m-auto sm:mt-10 md:p-10 max-w-md sm:max-w-md md:max-w-2xl lg:max-w-4xl">
 
       <div class="flex flex-col md:flex-row justify-between items-center gap-6">
         <!--file upload-->
         <div class="flex items-center gap-6 w-full md:w-auto">
           <div class="px-6 py-4 md:px-10 md:py-8 border-2 border-gray-200 rounded-2xl text-center">
-            <label for="fileUpload" class="text-blue-600 cursor-pointer">
+            <img id="logoPreview" class="hidden max-h-24 mx-auto mb-2" src="" alt="Logo Preview">
+            <label for="fileUpload" class="text-blue-600 cursor-pointer print:hidden">
               UPLOAD
               <i class="fa-solid fa-upload cursor-pointer" style="color: rgba(116, 192, 252, 1);"></i>
             </label>
@@ -47,8 +48,8 @@
           </div>
           <!--File Upload text-->
           <span>
-            <p class="m-0 font-semibold">Upload logo</p>
-            <p class="text-gray-400 m-0 text-xs md:text-sm">PNG , JPEG or PDF files</p>
+            <p class="m-0 font-semibold print:hidden">Upload logo</p>
+            <p class="text-gray-400 m-0 text-xs md:text-sm print:hidden">PNG , JPEG or PDF files</p>
           </span>
         </div>
         <!--Invoice text box-->
@@ -150,12 +151,15 @@
               placeholder="Product Details"></textarea>
             <input type="text" class="border border-gray-300 p-1 w-20 sm:w-full" placeholder="HSN/SAC">
           </div>
-          <input type="number" class="productQuantity border border-gray-300 w-full text-center h-10" placeholder="0" required />
-          <input type="number" class="productRate border border-gray-300 w-full text-center h-10" placeholder="0.00" required />
+          <input type="number" class="productQuantity border border-gray-300 w-full text-center h-10" placeholder="0"
+            required />
+          <input type="number" class="productRate border border-gray-300 w-full text-center h-10" placeholder="0.00"
+            required />
           <input type="number" class="rowSGST border border-gray-300 w-full text-center h-10" placeholder="0" />
           <input type="number" class="rowCGST border border-gray-300 w-full text-center h-10" placeholder="0" />
           <input type="number" class="rowCess border border-gray-300 w-full text-center h-10" placeholder="0" />
-          <input readonly class="productTotal border border-gray-300 w-full text-center h-10 bg-gray-100" placeholder="Total" />
+          <input readonly class="productTotal border border-gray-300 w-full text-center h-10 bg-gray-100"
+            placeholder="Total" />
           <button type="button"
             class="remove-btn text-red-500 hover:text-red-700 font-bold text-xl cursor-pointer">✕</button>
         </div>
@@ -166,15 +170,15 @@
           <!--subTotal-->
           <input type="text" placeholder="Sub Total"
             class=" text-center border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded w-30">
-            <input readonly
+          <input readonly
             class="subTotal border border-gray-300 w-30 text-center h-10 border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded"
-            placeholder="Total" />  <!--subTotal-->
-         <!--SGST-->
+            placeholder="Total" /> <!--subTotal-->
+          <!--SGST-->
           <input type="text" placeholder="SGST"
             class="text-center border border-transparent focus:outline-none focus-ring-1 focus:ring-blue-400 hover:border-blue-400 rounded w-30">
           <input readonly
             class="totalSGSTDisplay border border-gray-300 w-30 text-center h-10 border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded"
-            placeholder="0.00" />  <!--SGST-->
+            placeholder="0.00" /> <!--SGST-->
           <!--CGST-->
           <input type="text" placeholder="CSGST"
             class="text-center border border-transparent focus:outline-none focus-ring-1 focus:ring-blue-400 hover:border-blue-400 rounded w-30">
@@ -208,9 +212,11 @@
           placeholder="Please Make the Payment within the due date"></textarea>
       </div>
       <!--Print Button-->
-      <div class="flex flex-row justify-center sm:justify-end mt-10">
-        <button type="button" id="printPage"
-          class="p-3 w-20 bg-blue-500 text-white rounded-lg cursor-pointer">Print</button>
+      <div class="flex flex-row justify-center sm:justify-end mt-10 print:hidden">
+        <button type="button" onclick="printInvoice()"
+          class="print-button p-3 w-20 bg-blue-500 text-white rounded-lg cursor-pointer">
+          Print
+        </button>
       </div>
       <div class="bg-black p-[1px] mt-5 sm:mt-10"></div>
       <div class="text-center text-black mt-10 text-xl font-semibold">

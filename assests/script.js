@@ -38,7 +38,7 @@ const updateGrandTotals = () => {
     const rows = document.querySelectorAll('.product-row');
     rows.forEach(row => {
         const rowTotal = parseFloat(row.querySelector('.productTotal').value) || 0;
-        const rowSGST = parseFloat(row.querySelector('.rowSGST')?.value) || 0; 
+        const rowSGST = parseFloat(row.querySelector('.rowSGST')?.value) || 0;
         const rowCGST = parseFloat(row.querySelector('.rowCGST')?.value) || 0;
         const rowCess = parseFloat(row.querySelector('.rowCess')?.value) || 0;
         subTotal += rowTotal;
@@ -64,6 +64,32 @@ productList.addEventListener('input', (e) => {
     }
     updateGrandTotals();
 });
+
+//print logic
+function printInvoice() {
+    const fields = document.querySelectorAll('div > input, div > textarea');
+    fields.forEach(input => {
+        const container = input.parentElement;
+        if (!input.value.trim()) container.classList.add('print:hidden');
+    });
+    window.print();
+}
+
+//fileupload
+fileUpload.addEventListener('change', function() {
+    const file = this.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            logoPreview.src = e.target.result;
+            logoPreview.classList.remove('hidden');
+            document.getElementById('uploadContainer').classList.add('hidden');
+        };
+        reader.readAsDataURL(file);
+    }
+});
+
+
 
 
 
