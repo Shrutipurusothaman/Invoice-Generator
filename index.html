@@ -127,6 +127,7 @@
             class="w-1/2 border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded">
         </div>
       </form>
+      <!--Invoice product details-->
       <div class="bg-gray-900 mt-10 sm:w-full">
         <div
           class="grid grid-cols-[1fr_1fr_1fr_1fr_1fr_1fr_1fr_0.5fr] p-2 gap-2 sm:grid-cols-[3fr_1fr_1fr_1fr_1fr_1fr_1fr_0.5fr]">
@@ -149,18 +150,72 @@
               placeholder="Product Details"></textarea>
             <input type="text" class="border border-gray-300 p-1 w-20 sm:w-full" placeholder="HSN/SAC">
           </div>
-          <input type="number" class="border border-gray-300 w-full text-center h-10" placeholder="0" />
-          <input type="number" class="border border-gray-300 w-full text-center h-10" placeholder="0.00" />
-          <input type="number" class="border border-gray-300 w-full text-center h-10" placeholder="0" />
-          <input type="number" class="border border-gray-300 w-full text-center h-10" placeholder="0" />
-          <input type="number" class="border border-gray-300 w-full text-center h-10" placeholder="0" />
-          <input readonly class="border border-gray-300 w-full text-center h-10 bg-gray-100" placeholder="Total" />
+          <input type="number" class="productQuantity border border-gray-300 w-full text-center h-10" placeholder="0" required />
+          <input type="number" class="productRate border border-gray-300 w-full text-center h-10" placeholder="0.00" required />
+          <input type="number" class="rowSGST border border-gray-300 w-full text-center h-10" placeholder="0" />
+          <input type="number" class="rowCGST border border-gray-300 w-full text-center h-10" placeholder="0" />
+          <input type="number" class="rowCess border border-gray-300 w-full text-center h-10" placeholder="0" />
+          <input readonly class="productTotal border border-gray-300 w-full text-center h-10 bg-gray-100" placeholder="Total" />
           <button type="button"
             class="remove-btn text-red-500 hover:text-red-700 font-bold text-xl cursor-pointer">✕</button>
         </div>
       </div>
       <button id="add-row-btn" class="mt-4 text-blue-600 font-semibold hover:cursor-pointer">+ Add Line Item</button>
-
+      <div class="flex flex-row justify-end mt-5">
+        <div class="grid grid-cols-2 gap-10">
+          <!--subTotal-->
+          <input type="text" placeholder="Sub Total"
+            class=" text-center border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded w-30">
+            <input readonly
+            class="subTotal border border-gray-300 w-30 text-center h-10 border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded"
+            placeholder="Total" />  <!--subTotal-->
+         <!--SGST-->
+          <input type="text" placeholder="SGST"
+            class="text-center border border-transparent focus:outline-none focus-ring-1 focus:ring-blue-400 hover:border-blue-400 rounded w-30">
+          <input readonly
+            class="totalSGSTDisplay border border-gray-300 w-30 text-center h-10 border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded"
+            placeholder="0.00" />  <!--SGST-->
+          <!--CGST-->
+          <input type="text" placeholder="CSGST"
+            class="text-center border border-transparent focus:outline-none focus-ring-1 focus:ring-blue-400 hover:border-blue-400 rounded w-30">
+          <input readonly
+            class="totalCGSTDisplay border border-gray-300 w-30 text-center h-10 border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded"
+            placeholder="0.00" /> <!--CGST-->
+          <!--CESS-->
+          <input type="text" placeholder="Cess"
+            class="text-center border border-transparent focus:outline-none focus-ring-1 focus:ring-blue-400 hover:border-blue-400 rounded w-30">
+          <input readonly
+            class="totalCessDisplay border border-gray-300 w-30 text-center h-10 border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded"
+            placeholder="0.00" /> <!--CESS-->
+          <!--fullTotal-->
+          <input type="text" placeholder="Total"
+            class=" text-center border border-transparent focus:outline-none focus-ring-1 focus:ring-blue-400 hover:border-blue-400 rounded w-30">
+          <input readonly
+            class="fullTotal border border-gray-300 w-30 text-center h-10 border border-transparent focus:outline-none focus:ring-1 focus:ring-blue-400 hover:border-blue-400 rounded"
+            placeholder="0.00" /><!--fullTotal-->
+        </div>
+      </div>
+      <!--Notes section-->
+      <div class="mt-10">
+        <h5 class="text-gray-800">Notes</h5>
+        <textarea class="border border-gray-50 w-full p-6 text-sm h-10"
+          placeholder="It was Great doing Business with you"></textarea>
+      </div>
+      <!--terms and conditions section-->
+      <div class="mt-10">
+        <h5 class="text-gray-800">Terms and Conditions</h5>
+        <textarea class="border border-gray-50 w-full p-6 text-sm h-10"
+          placeholder="Please Make the Payment within the due date"></textarea>
+      </div>
+      <!--Print Button-->
+      <div class="flex flex-row justify-center sm:justify-end mt-10">
+        <button type="button" id="printPage"
+          class="p-3 w-20 bg-blue-500 text-white rounded-lg cursor-pointer">Print</button>
+      </div>
+      <div class="bg-black p-[1px] mt-5 sm:mt-10"></div>
+      <div class="text-center text-black mt-10 text-xl font-semibold">
+        * Crafted with ease using Invoice Generator *
+      </div>
     </div>
   </main>
   <script src="./assests/script.js"></script>
