@@ -267,23 +267,14 @@
   .hidden {
     display: none;
   }
-  .table {
-    display: table;
-  }
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
   .max-h-24 {
     max-height: calc(var(--spacing) * 24);
   }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
-  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
-  }
-  .w-3 {
-    width: calc(var(--spacing) * 3);
   }
   .w-3\/4 {
     width: calc(3/4 * 100%);
@@ -300,14 +291,8 @@
   .max-w-md {
     max-width: var(--container-md);
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
   .cursor-pointer {
     cursor: pointer;
-  }
-  .resize {
-    resize: both;
   }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -503,20 +488,9 @@
   .text-white {
     color: var(--color-white);
   }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .shadow {
-    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
   .shadow-sm {
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .hover\:cursor-pointer {
     &:hover {
@@ -697,21 +671,65 @@
   }
 }
 @media print {
+  @page {
+    margin: 10mm;
+    size: A4 portrait;
+  }
   body {
     background: white !important;
     margin: 0 !important;
     padding: 0 !important;
+    display: block !important;
   }
   #invoice-card {
-    width: 100% !important;
-    max-width: none !important;
-    shadow: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
     border: none !important;
+    box-shadow: none !important;
+    width: 90% !important;
+    margin: 0 auto !important;
+    padding: 10px !important;
+    background: white !important;
+    height: auto !important;
+    break-inside: avoid !important;
+    page-break-after: avoid !important;
+  }
+  .gap-10 {
+    gap: 6px !important;
+  }
+  .mt-10 {
+    margin-top: 10px !important;
+  }
+  .mt-5 {
+    margin-top: 5px !important;
+  }
+  .p-6 {
+    padding: 5px !important;
+  }
+  .grid-cols-2 {
+    gap: 4px !important;
+    margin-top: 10px !important;
+    display: grid !important;
+    justify-content: end !important;
   }
   .product-row {
-    page-break-inside: avoid;
+    display: grid !important;
+    grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr 1fr !important;
+    gap: 10px !important;
+    width: 100% !important;
+    border-bottom: 1px solid #eee !important;
+    padding: 5px 0 !important;
+    align-items: center !important;
+  }
+  input, textarea {
+    border: none !important;
+    background: transparent !important;
+    padding: 2px !important;
+    font-size: 13px !important;
+    width: 100% !important;
+    outline: none !important;
+    resize: none !important;
+  }
+  .print-button, #add-row-btn, .remove-btn, .crafted-text, .bg-black {
+    display: none !important;
   }
 }
 @property --tw-border-style {
@@ -788,11 +806,6 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -812,7 +825,6 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
-      --tw-outline-style: solid;
     }
   }
 }

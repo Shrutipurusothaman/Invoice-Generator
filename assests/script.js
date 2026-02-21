@@ -67,13 +67,24 @@ productList.addEventListener('input', (e) => {
 
 //print logic
 function printInvoice() {
-    const fields = document.querySelectorAll('div > input, div > textarea');
-    fields.forEach(input => {
-        const container = input.parentElement;
-        if (!input.value.trim()) container.classList.add('print:hidden');
-    });
-    window.print();
+  const allInputs = document.querySelectorAll('input, textarea');
+  allInputs.forEach(input => {
+    input.setAttribute('value', input.value); 
+  });
+  const fields = document.querySelectorAll('div > input, div > textarea');
+  fields.forEach(input => {
+    const container = input.parentElement;
+    if (!input.value.trim()) {
+      container.classList.add('print:hidden');
+    } else {
+      container.classList.remove('print:hidden');
+    }
+  });
+  const removeButtons = document.querySelectorAll('.remove-btn');
+  removeButtons.forEach(btn => btn.classList.add('print:hidden'));
+  window.print();
 }
+
 
 //fileupload
 fileUpload.addEventListener('change', function() {

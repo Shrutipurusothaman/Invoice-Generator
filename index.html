@@ -16,16 +16,16 @@
   <header class="invoice-generator-title">
     <div class="flex m-4 justify-between items-center gap-2">
       <h1 class="text-xl md:text-2xl">GST INVOICE GENERATOR</h1>
-      <p class="font-bold border-2 border-black hover:bg-black hover:text-white hover:cursor-pointer rounded-sm p-2 "
+      <p class="font-bold border-2 border-black hover:bg-black hover:text-white hover:cursor-pointer rounded-sm p-2 print:hidden"
         id="Signup-Button">Sign up</p>
     </div>
     <div class="border-b border-black-800 w-full"></div>
   </header>
   <nav class="flex flex-col gap-5 justify-center items-center mt-6">
-    <h1 class="text-3xl font-light m-auto sm:text-5xl mx-auto my-auto">
+    <h1 class="text-3xl font-light m-auto sm:text-5xl mx-auto my-auto print:hidden">
       <span class="text-blue-600">Create invoices</span><br> that make you look good...
     </h1>
-    <p class="text-50 sm:text-xl md:text-2xl font-light sm:max-w-md md:max-w-2xl mx-auto text-center ">Create
+    <p class="text-50 sm:text-xl md:text-2xl font-light sm:max-w-md md:max-w-2xl mx-auto text-center print:hidden">Create
       professional yet
       personalized invoices online using invoice generator tool. Just add all the information to the invoice and
       download or print it to send it to your customers.</p>
@@ -214,12 +214,12 @@
       <!--Print Button-->
       <div class="flex flex-row justify-center sm:justify-end mt-10 print:hidden">
         <button type="button" onclick="printInvoice()"
-          class="print-button p-3 w-20 bg-blue-500 text-white rounded-lg cursor-pointer">
+          class="print-button p-3 w-20 bg-blue-500 text-white rounded-lg cursor-pointer print:hidden">
           Print
         </button>
       </div>
       <div class="bg-black p-[1px] mt-5 sm:mt-10"></div>
-      <div class="text-center text-black mt-10 text-xl font-semibold">
+      <div class="crafted-text text-center text-black mt-10 text-xl font-semibold">
         * Crafted with ease using Invoice Generator *
       </div>
     </div>
